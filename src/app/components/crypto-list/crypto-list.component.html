@@ -1,9 +1,18 @@
 <h2>Crypto list</h2>
+<mat-radio-group >
+    <mat-radio-button *ngFor="let item of cryptos$ | async" [value]="item">{{item.symbol}}</mat-radio-button>
+  </mat-radio-group>
+ 
 
 
 
-<mat-chip-list aria-label="Fish selection">
+
+<!--  <mat-chip-list aria-label="Fish selection">
   <mat-chip *ngFor="let item of cryptos$ | async">
  {{item.symbol}}
 </mat-chip>
-</mat-chip-list>
+</mat-chip-list> 
+
+
+
+-->
