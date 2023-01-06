@@ -8,7 +8,7 @@ import { ProductComponentModule } from './components/product/product.component-m
 import { HolidayListComponentModule } from './components/holiday-list/holiday-list.component-module';
 
 @NgModule({
-  imports: [RouterModule.forRoot([{ path: 'cryptos', component: CryptoListComponent }, { path: 'categories-menu', component: ProductComponent }, { path: 'public-holidays', component: HolidayListComponent }]), CryptoListComponentModule, ProductComponentModule, HolidayListComponentModule],
+  imports: [RouterModule.forRoot([{ path: 'cryptos', component: CryptoListComponent }, { path: 'categories', component: ProductComponent }, { path: 'public-holidays', component: HolidayListComponent }]), CryptoListComponentModule, ProductComponentModule, HolidayListComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
