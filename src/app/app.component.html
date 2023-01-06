@@ -1,1 +1,4 @@
 <router-outlet></router-outlet>
+<mat-list role="list">
+    <mat-list-item role="listitem" *ngFor="let item of names$ | async; index as i">{{i+1}} {{item}}
+ </mat-list-item></mat-list>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {of} from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  names$ = of(['Tom', 'Andrew', 'Chris', 'Peter']);
   title = 'ng-material-starter-kit-acms';
 }
