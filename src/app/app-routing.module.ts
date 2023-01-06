@@ -6,7 +6,7 @@ import { CryptoListComponentModule } from './components/crypto-list/crypto-list.
 import { ProductComponentModule } from './components/product/product.component-module';
 
 @NgModule({
-  imports: [RouterModule.forRoot([{ path: 'cryptos', component: CryptoListComponent }, { path: 'products', component: ProductComponent }]), CryptoListComponentModule, ProductComponentModule],
+  imports: [RouterModule.forRoot([{ path: 'cryptos', component: CryptoListComponent }, { path: 'categories-menu', component: ProductComponent }]), CryptoListComponentModule, ProductComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

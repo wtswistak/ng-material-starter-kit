@@ -1,7 +1,12 @@
 <h2>Categories list</h2>
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item *ngFor="let item of list$ | async">
+  {{item}}
+</button>
+</mat-menu>
 
 
-
-<section>
+<!-- section>
   <mat-checkbox *ngFor="let item of list$ | async">{{item}} </mat-checkbox>
-</section>
+</section>-->
