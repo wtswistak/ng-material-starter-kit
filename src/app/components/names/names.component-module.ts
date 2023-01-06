@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
-import { of } from 'rxjs';
 import { NamesComponent } from './names.component';
 
 @NgModule({
-  imports: [CommonModule, MatTableModule],
+  imports: [MatListModule, CommonModule, MatTableModule],
   declarations: [NamesComponent],
   providers: [],
   exports: [NamesComponent]
 })
 export class NamesComponentModule {
-  names$ = of(['Tom', 'Andrew', 'Chris', 'Peter']);
+
 }
