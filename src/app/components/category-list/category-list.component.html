@@ -1,9 +1,11 @@
-<h2>Categories list</h2>
-<section *ngIf="categories$ | async as categories; else loading">
- <ng-container *ngIf="categories.length>0 ;else empty">
-    <mat-checkbox *ngFor="let item of categories$ | async">{{item}} </mat-checkbox>
+<h2>Select category</h2>
+<mat-selection-list role="list" *ngIf="categories$ | async as categories; else loading">
+    <ng-container *ngIf="categories.length>0 ;else empty">
+    <mat-list-option role="listitem" *ngFor="let item of categories$ | async">{{item}}
+    </mat-list-option>
 </ng-container>
-</section>
+</mat-selection-list>
+
 <ng-template #loading>
     <mat-progress-spinner
         [color]="'primary'"
@@ -12,6 +14,15 @@
       </mat-progress-spinner>
 </ng-template>
 <ng-template #empty>
-    <img  src="https://img.freepik.com/darmowe-wektory/gniewni-ludzie-kloca-sie-o-ilustracje-koncepcji_114360-14573.jpg?w=740&t=st=1673216904~exp=1673217504~hmac=2039e89f13cad220794f13dfdab58f40e1c9f1f3d6fe2f0c50b2d36a1cccb6b5" alt="">
-   
+   Oops! There is no data
 </ng-template>
+
+<!--
+<section *ngIf="categories$ | async as categories; else loading">
+ <ng-container *ngIf="categories.length>0 ;else empty">
+    <mat-checkbox *ngFor="let item of categories$ | async">{{item}} </mat-checkbox>
+</ng-container>
+</section>
+
+
+-->
