@@ -4,10 +4,11 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ProductComponent } from './product.component';
 
 @NgModule({
-  imports: [MatCheckboxModule, CommonModule, MatListModule, MatButtonModule, MatMenuModule],
+  imports: [MatCheckboxModule, CommonModule, MatListModule, MatButtonModule, MatMenuModule, MatProgressSpinnerModule],
   declarations: [ProductComponent],
   providers: [],
   exports: [ProductComponent]

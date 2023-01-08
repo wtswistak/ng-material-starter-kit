@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
-import { Observable } from 'rxjs';
+import { delay, map, Observable } from 'rxjs';
 import { ProductModel } from '../../models/product.model';
 import { ProductService } from '../../services/product.service';
 
@@ -11,7 +11,11 @@ import { ProductService } from '../../services/product.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductComponent {
-  readonly list$: Observable<ProductModel[]> = this._productService.getAll();
+  readonly list$: Observable<ProductModel[]> = this._productService.getAll()
+  .pipe(
+    delay(2000),
+    map(()=>[])
+  );
 
   constructor(private _productService: ProductService) {
   }
