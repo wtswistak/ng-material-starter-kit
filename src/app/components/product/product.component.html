@@ -1,21 +1,10 @@
 <h2>Product list</h2>
-<mat-list role="list" *ngIf="list$ | async as list; else loading">
-  <ng-container *ngIf="list.length>0; else empty">
- 
-  <mat-list-item role="listitem" *ngFor="let item of list$ | async">{{item.title}} {{item.price}}$
+<mat-list role="list">
+
+  <mat-list-item role="listitem" *ngFor="let item of list$ | async"><img src="{{item.image}}" alt=""> {{item.title}} {{item.price | currency:'USD'}}
   </mat-list-item>
-</ng-container>
+
 </mat-list>
-<ng-template #empty>
- Oops! There is not data!
-</ng-template>
-<ng-template #loading>
-<mat-progress-spinner
-        [color]="'primary'"
-        [mode]="'indeterminate'"
-        [value]="50">
-      </mat-progress-spinner>
-</ng-template>
 
 
 <!-- section>
@@ -36,6 +25,24 @@
   {{item}}
 </button>
 </mat-menu>
+
+<mat-list role="list" *ngIf="list$ | async as list; else loading">
+  <ng-container *ngIf="list.length>0; else empty">
+ 
+  <mat-list-item role="listitem" *ngFor="let item of list$ | async">{{item.title}} {{item.price}}$
+  </mat-list-item>
+</ng-container>
+</mat-list>
+<ng-template #empty>
+ Oops! There is not data!
+</ng-template>
+<ng-template #loading>
+<mat-progress-spinner
+        [color]="'primary'"
+        [mode]="'indeterminate'"
+        [value]="50">
+      </mat-progress-spinner>
+</ng-template>
 
 
 

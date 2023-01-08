@@ -12,10 +12,6 @@ import { ProductService } from '../../services/product.service';
 })
 export class ProductComponent {
   readonly list$: Observable<ProductModel[]> = this._productService.getAll()
-  .pipe(
-    delay(2000),
-    map(()=>[])
-  );
 
   constructor(private _productService: ProductService) {
   }
