@@ -5,10 +5,11 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { CryptoListComponent } from './crypto-list.component';
 
 @NgModule({
-  imports: [MatChipsModule, CommonModule, MatCheckboxModule, MatFormFieldModule, MatRadioModule, ReactiveFormsModule],
+  imports: [MatChipsModule, CommonModule, MatCheckboxModule, MatFormFieldModule, MatRadioModule, ReactiveFormsModule, MatProgressSpinnerModule],
   declarations: [CryptoListComponent],
   providers: [],
   exports: [CryptoListComponent]
