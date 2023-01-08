@@ -1,3 +1,34 @@
+
+  <ng-container *ngIf="cryptos$ | async as list">
+      <table mat-table [dataSource]="list" class="mat-elevation-z8">         <!-- Column 1 -->
+        <ng-container matColumnDef="column1">
+          <th mat-header-cell *matHeaderCellDef> Symbol </th>
+          <td mat-cell *matCellDef="let element"> {{ element.symbol }} </td>
+        </ng-container>
+        <!-- Column 2 -->
+        <ng-container matColumnDef="column2">
+          <th mat-header-cell *matHeaderCellDef> Last Price </th>
+          <td mat-cell *matCellDef="let element"> {{element.lastPrice}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="column3">
+          <th mat-header-cell *matHeaderCellDef> Last Quantity </th>
+          <td mat-cell *matCellDef="let element"> {{element.lastQty}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="['column1', 'column2', 'column3']"></tr>
+        <tr mat-row *matRowDef="let row; columns: ['column1', 'column2', 'column3'];"></tr>  
+      </table>
+    </ng-container>
+
+
+
+
+<!--  
+<mat-radio-group >
+    <mat-radio-button *ngFor="let item of cryptos$ | async" [value]="item">{{item.symbol}}</mat-radio-button>
+  </mat-radio-group>
+
 <h2>Crypto list</h2>
 <mat-chip-list aria-label="Fish selection" *ngIf="cryptos$ | async as cryptos; else loading">
   <ng-container *ngIf="cryptos.length>0; else empty">
@@ -18,15 +49,4 @@
   Oops! There is no data!
 
 </ng-template>
- 
-
-
-
-
-<!--  
-<mat-radio-group >
-    <mat-radio-button *ngFor="let item of cryptos$ | async" [value]="item">{{item.symbol}}</mat-radio-button>
-  </mat-radio-group>
-
-
 -->

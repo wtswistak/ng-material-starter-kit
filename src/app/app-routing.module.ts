@@ -12,7 +12,7 @@ import { NamesComponentModule } from './components/names/names.component-module'
 import { CategoryListComponentModule } from './components/category-list/category-list.component-module';
 
 @NgModule({
-  imports: [RouterModule.forRoot([{ path: 'cryptos', component: CryptoListComponent }, { path: 'products-search', component: ProductComponent }, { path: 'public-holidays', component: HolidayListComponent }, { path: 'list-1-single-table-names', component: NamesComponent }, { path: 'categories', component: CategoryListComponent }]), CryptoListComponentModule, ProductComponentModule, HolidayListComponentModule, NamesComponentModule, CategoryListComponentModule],
+  imports: [RouterModule.forRoot([{ path: 'crypto-table', component: CryptoListComponent }, { path: 'products-search', component: ProductComponent }, { path: 'public-holidays', component: HolidayListComponent }, { path: 'list-1-single-table-names', component: NamesComponent }, { path: 'categories', component: CategoryListComponent }]), CryptoListComponentModule, ProductComponentModule, HolidayListComponentModule, NamesComponentModule, CategoryListComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

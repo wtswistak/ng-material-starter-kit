@@ -13,8 +13,7 @@ import { CryptoService } from '../../services/crypto.service';
 export class CryptoListComponent {
   readonly cryptos$: Observable<CryptoModel[]> = this._cryptoService.getAll()
   .pipe(
-    delay(2000),
-    map(()=>[])
+   
   );
 
   constructor(private _cryptoService: CryptoService) {
