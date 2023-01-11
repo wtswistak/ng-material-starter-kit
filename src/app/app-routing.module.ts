@@ -8,6 +8,7 @@ import { CategoryListComponent } from './components/category-list/category-list.
 import { JobComponent } from './components/job/job.component';
 import { JobsGridComponent } from './components/jobs-grid/jobs-grid.component';
 import { InfluComponent } from './components/influ/influ.component';
+import { FormComponent } from './components/form/form.component';
 import { CryptoListComponentModule } from './components/crypto-list/crypto-list.component-module';
 import { ProductComponentModule } from './components/product/product.component-module';
 import { HolidayListComponentModule } from './components/holiday-list/holiday-list.component-module';
@@ -16,9 +17,11 @@ import { CategoryListComponentModule } from './components/category-list/category
 import { JobComponentModule } from './components/job/job.component-module';
 import { JobsGridComponentModule } from './components/jobs-grid/jobs-grid.component-module';
 import { InfluComponentModule } from './components/influ/influ.component-module';
+import { FormComponentModule } from './components/form/form.component-module';
 
 @NgModule({
-  imports: [RouterModule.forRoot([{ path: 'crypto-table', component: CryptoListComponent }, { path: 'products-search', component: ProductComponent }, { path: 'public-holidays', component: HolidayListComponent }, { path: 'list-1-single-table-names', component: NamesComponent }, { path: 'categories', component: CategoryListComponent }, { path: 'job-post-table', component: JobComponent }, { path: 'list-1-multi-gird-list-jobs', component: JobsGridComponent }, { path: 'list-1-nested-list-influencers', component: InfluComponent }]), CryptoListComponentModule, ProductComponentModule, HolidayListComponentModule, NamesComponentModule, CategoryListComponentModule, JobComponentModule, JobsGridComponentModule, InfluComponentModule],
+  imports: [RouterModule.forRoot([{ path: 'crypto-table', component: CryptoListComponent }, { path: 'products-search', component: ProductComponent }, { path: 'public-holidays', component: HolidayListComponent }, { path: 'list-1-single-table-names', component: NamesComponent }, { path: 'categories', component: CategoryListComponent }, { path: 'job-post-table', component: JobComponent }, { path: 'list-1-multi-gird-list-jobs', component: JobsGridComponent }, { path: 'list-1-nested-list-influencers', component: InfluComponent }, 
+  { path: 'form-1-control-name', component: FormComponent }]), CryptoListComponentModule, ProductComponentModule, HolidayListComponentModule, NamesComponentModule, CategoryListComponentModule, JobComponentModule, JobsGridComponentModule, InfluComponentModule, FormComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
