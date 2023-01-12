@@ -8,6 +8,6 @@
                required>
             <mat-error *ngIf="age.get('age')!.invalid">You are under age :(</mat-error>
         </mat-form-field>
-        {{age.valueChanges |async |json }}
+       {{age.valueChanges |async |json }}
     </div>
     </form>

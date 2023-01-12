@@ -1,0 +1,13 @@
+<form [formGroup]="comment" (ngSubmit)="onCommentSubmitted(comment)">
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Write your comment..</mat-label>
+            <textarea matInput 
+            type="textarea" 
+            placeholder="Comment" 
+            formControlName="comment" 
+            required> </textarea>
+            <mat-error *ngIf="comment.get('comment')!.invalid">Comment needs to have minimum of 4 words</mat-error>
+        </mat-form-field>
+    </div>
+    </form>
