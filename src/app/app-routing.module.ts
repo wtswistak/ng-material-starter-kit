@@ -12,6 +12,7 @@ import { FormComponent } from './components/form/form.component';
 import { FormAgeComponent } from './components/form-age/form-age.component';
 import { FormEmailComponent } from './components/form-email/form-email.component';
 import { FormCommentComponent } from './components/form-comment/form-comment.component';
+import { FormUserRolesComponent } from './components/form-user-roles/form-user-roles.component';
 import { CryptoListComponentModule } from './components/crypto-list/crypto-list.component-module';
 import { ProductComponentModule } from './components/product/product.component-module';
 import { HolidayListComponentModule } from './components/holiday-list/holiday-list.component-module';
@@ -24,9 +25,10 @@ import { FormComponentModule } from './components/form/form.component-module';
 import { FormAgeComponentModule } from './components/form-age/form-age.component-module';
 import { FormEmailComponentModule } from './components/form-email/form-email.component-module';
 import { FormCommentComponentModule } from './components/form-comment/form-comment.component-module';
+import { FormUserRolesComponentModule } from './components/form-user-roles/form-user-roles.component-module';
 
 @NgModule({
-  imports: [RouterModule.forRoot([{ path: 'crypto-table', component: CryptoListComponent }, { path: 'products-search', component: ProductComponent }, { path: 'public-holidays', component: HolidayListComponent }, { path: 'list-1-single-table-names', component: NamesComponent }, { path: 'categories', component: CategoryListComponent }, { path: 'job-post-table', component: JobComponent }, { path: 'list-1-multi-gird-list-jobs', component: JobsGridComponent }, { path: 'list-1-nested-list-influencers', component: InfluComponent }, { path: 'form-1-control-name', component: FormComponent }, { path: 'form-1-control-age', component: FormAgeComponent }, { path: 'form-1-control-email', component: FormEmailComponent }, { path: 'form-1-control-comment', component: FormCommentComponent }]), CryptoListComponentModule, ProductComponentModule, HolidayListComponentModule, NamesComponentModule, CategoryListComponentModule, JobComponentModule, JobsGridComponentModule, InfluComponentModule, FormComponentModule, FormAgeComponentModule, FormEmailComponentModule, FormCommentComponentModule],
+  imports: [RouterModule.forRoot([{ path: 'crypto-table', component: CryptoListComponent }, { path: 'products-search', component: ProductComponent }, { path: 'public-holidays', component: HolidayListComponent }, { path: 'list-1-single-table-names', component: NamesComponent }, { path: 'categories', component: CategoryListComponent }, { path: 'job-post-table', component: JobComponent }, { path: 'list-1-multi-gird-list-jobs', component: JobsGridComponent }, { path: 'list-1-nested-list-influencers', component: InfluComponent }, { path: 'form-1-control-name', component: FormComponent }, { path: 'form-1-control-age', component: FormAgeComponent }, { path: 'form-1-control-email', component: FormEmailComponent }, { path: 'form-1-control-comment', component: FormCommentComponent }, { path: 'form-1-control-select-user-roles', component: FormUserRolesComponent }]), CryptoListComponentModule, ProductComponentModule, HolidayListComponentModule, NamesComponentModule, CategoryListComponentModule, JobComponentModule, JobsGridComponentModule, InfluComponentModule, FormComponentModule, FormAgeComponentModule, FormEmailComponentModule, FormCommentComponentModule, FormUserRolesComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
