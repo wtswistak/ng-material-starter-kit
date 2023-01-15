@@ -11,4 +11,12 @@ export class ProductService {
   getAll(): Observable<ProductModel[]> {
     return this._httpClient.get<ProductModel[]>('https://fakestoreapi.com/products');
   }
+
+  getAllCategories(): Observable<ProductModel[]> {
+    return this._httpClient.get<ProductModel[]>("https://fakestoreapi.com/products/categories");
+  }
+
+  create(product: ProductModel): Observable<void> {
+    return this._httpClient.post<void>("https://fakestoreapi.com/products", product );
+  }
 }
