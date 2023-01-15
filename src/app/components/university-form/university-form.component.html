@@ -1,0 +1,16 @@
+
+
+    <mat-label>Select a University</mat-label>     
+     <div>
+        <mat-radio-group [formControl]="university">
+        
+            <mat-radio-button *ngFor="let item of universityName$ | async" [value]="item.name">{{item.name}}</mat-radio-button>
+         
+      </mat-radio-group>
+   
+    </div>
+       {{university.valueChanges |async}}
+
+
+
+
