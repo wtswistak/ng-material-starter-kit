@@ -15,7 +15,24 @@ export class FormUserRolesComponent {
   userRole = new FormControl('', [Validators.required]);
 
   readonly rolesList$: Observable<UserRoleModel[]> = this._userRoleService.getAll();
+  readonly usersForm: FormGroup = new FormGroup({
+    role: new FormControl(),
+    email: new FormControl()
+  });
 
   constructor(private _userRoleService: UserRoleService) {
   }
-}
+
+  onUsersFormSubmitted(usersForm: FormGroup): void {
+    if(!usersForm.valid){
+      return;
+    }
+    this._userRoleService.create({ 
+      role: usersForm.get('role')?.value, 
+      email: usersForm.get('email')?.value, 
+       })
+       .subscribe();
+  }
+
+  }
+
