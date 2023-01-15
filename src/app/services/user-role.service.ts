@@ -11,7 +11,7 @@ export class UserRoleService {
     return this._httpClient.get<UserRoleModel[]>('https://636ce2d8ab4814f2b2712854.mockapi.io/roles');
   }
   create(roles: UserRoleModel): Observable<void> {
-    return this._httpClient.post<void>("https://fakestoreapi.com/products", roles );
+    return this._httpClient.post<void>("https://636ce2d8ab4814f2b2712854.mockapi.io/user", roles );
   }
 
 }

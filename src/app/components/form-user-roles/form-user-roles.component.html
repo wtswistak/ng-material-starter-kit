@@ -1,16 +1,6 @@
 <h2>Create user with a role:</h2>
 <form [formGroup]="usersForm" (ngSubmit)="onUsersFormSubmitted(usersForm)">
-  <div>
- <mat-form-field appearance="fill">
-  <mat-label>Choose an option</mat-label>
-  <mat-select formControlName="role">
-    <mat-option *ngFor="let item of rolesList$ | async" [value]="item">
-     {{item.role}}    
-</mat-option>
-   </mat-select>
-</mat-form-field>
-    
-  </div>
+
   <div>
     <mat-form-field appearance="fill">
       <mat-label>Email</mat-label>
@@ -18,6 +8,19 @@
       <mat-error *ngIf="usersForm.get('email')!.invalid">email is invalid</mat-error>
     </mat-form-field>
   </div>
+
+  <div>
+
+    <mat-label>Role id</mat-label>      
+    <div>
+      <mat-radio-group formControlName="role">
+      <mat-radio-button *ngFor="let item of rolesList$ | async" [value]="item">{{item.role}}</mat-radio-button>
+    
+    </mat-radio-group>
+    </div>
+    
+        
+      </div>
   <div>
     <button type="submit" mat-raised-button color="primary">Submit</button>
   </div>
